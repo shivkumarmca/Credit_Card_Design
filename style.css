@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;1,100;1,300;1,400&display=swap");
+
+/* @import url('https://fonts.googleapis.com/css2?family=Klee+One:wght@400;600&family=Lato:ital,wght@0,100;0,300;0,400;1,100;1,300;1,400&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap'); */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+  /* font-family: 'Klee One', cursive; */
+  /* font-family: 'PT Sans', sans-serif; */
+}
+
+.container {
+  height: 100vh;
+  width: 100vw;
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card {
+  width: 500px;
+  height: 300px;
+  color: #fff;
+  cursor: pointer;
+}
+.card_inner {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  transition: 1.5s;
+  transform-style:preserve-3d;
+}
+.card_front,
+.card_back {
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(45deg, #0045c7, #ff2c7d);
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 20px 30px;
+  border-radius: 15px;
+  overflow: hidden;
+  z-index: 1;
+  backface-visibility: hidden;
+}
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.map_img {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.3;
+  z-index: -1;
+}
+.card_number {
+  font-size: 30px;
+  margin-top: 60px;
+}
+
+.card_holder {
+  font-size: 12px;
+  margin-top: 40px;
+}
+.card_holder_details {
+  font-size: 22px;
+  margin-top: 20px;
+}
+
+.card_info{
+    margin-top: 30px;
+    font-size: 14px;
+    /* text-align: center; */
+}
+.card_info p{
+    opacity: .9;
+}
+
+/* BACK */
+.megnetic_strip {
+  background: #222;
+  margin-left: -30px;
+  margin-right: -30px;
+  margin-top: 10px;
+  height: 60px;
+}
+
+.card_cvv{
+    margin-top: 20px;
+}
+.card_cvv div{
+    flex: 1;
+}
+.card_cvv img{
+    display: block;
+    width: 100%;
+    line-height: 0;
+}
+.card_cvv p{
+    background: #fff;
+    color: #000;
+    font-size: 18px;
+    font-style: italic;
+    font-weight: bold;
+    padding: 10px 20px;
+}
+
+.card_holder_sign{
+margin-top: 30px;
+}
+.card_back{
+    transform: rotateY(180deg);
+}
+
+.card:hover .card_inner{
+    transform: rotateY(-180deg);
+}
